@@ -79,10 +79,3 @@ pytest
 ---
 
 > “La calidad del código no está en lo que hace, sino en cómo lo hace.”
-
-
-### Instrucciones para el Uso del README
-
-1. **Copia el contenido**: Copia el contenido del `README.md` en un archivo nuevo llamado `README.md` en tu repositorio de GitHub.
-2. **Ajusta según sea necesario**: Si hay detalles específicos que deseas agregar o modificar, siéntete libre de hacerlo.
-3. **Sube el archivo a GitHub**: Asegúrate de que el archivo `README.md` esté en la raíz de tu repositorio para que sea visible en la página principal.
