@@ -1,39 +1,88 @@
-# Laboratorio 8: Clasificación con Árbol de Decisión y Bosques Aleatorios
+# Clasificación con Árbol de Decisión y Bosques Aleatorios
 
-Este repositorio contiene el código y los tests para el Laboratorio 8, donde se implementa un modelo de clasificación utilizando Árboles de Decisión y Bosques Aleatorios. El laboratorio se basa en el conjunto de datos de cáncer de mama de Wisconsin.
+Este repositorio contiene el código y los tests, donde se implementa un modelo de clasificación utilizando Árboles de Decisión y Bosques Aleatorios. El proyecto se basa en el conjunto de datos de cáncer de mama de Wisconsin. Se aplican técnicas de clasificación utilizando modelos de Árbol de Decisión y Bosques Aleatorios, incluyendo un pipeline completo desde la limpieza de datos hasta la evaluación comparativa de modelos, manteniendo buenas prácticas de programación y pruebas automatizadas con `pytest`.
 
 ## Contenido del Repositorio
 
 - **LAB08-RUELAS.ipynb**: El archivo original en formato Jupyter Notebook.
-- **lab08_ruelas_SIN_CORREGIR.py**: Versión convertida del notebook a un archivo Python (.py) que contiene el código sin correcciones.
 - **main_module.py**: Archivo que contiene las funciones y la lógica principal del laboratorio.
 - **test_lab08_ruelas.py**: Archivo que contiene los tests para verificar la funcionalidad del código.
 
+## 🧩 Funcionalidades
+
+- Limpieza e imputación de datos faltantes.
+- Detección y tratamiento de outliers (IQR Capping).
+- Estandarización de variables numéricas.
+- Balanceo de clases con SMOTE.
+- Entrenamiento con Árbol de Decisión y Bosque Aleatorio (GridSearchCV).
+- Evaluación con métricas: accuracy, precision, recall, f1-score.
+- Pruebas automatizadas con `pytest`.
+
 ## Proceso de Conversión
 
-1. **Conversión de Jupyter Notebook a Python**:
-   - Se tomó el archivo `LAB08-RUELAS.ipynb` y se convirtió a un archivo Python llamado `lab08_ruelas_SIN_CORREGIR.py`. Este archivo contenía el código original sin correcciones.
-
-2. **Corrección de Errores**:
-   - Se identificaron y corrigieron errores en el archivo `lab08_ruelas_SIN_CORREGIR.py`, asegurando que el código funcionara correctamente y que los tests pudieran ejecutarse sin fallos.
-
-3. **Creación de `main_module.py`**:
+1. **Creación de `main_module.py`**:
    - Se creó un nuevo archivo llamado `main_module.py`, que contiene todas las funciones necesarias para el laboratorio. Este archivo incluye:
      - **Funciones de Preprocesamiento**: `preprocess_data` para manejar valores faltantes, outliers, estandarización y balanceo de clases.
      - **Funciones de División de Datos**: `split_data` para dividir el conjunto de datos en entrenamiento y prueba.
      - **Funciones de Entrenamiento**: `train_decision_tree` y `train_random_forest` para entrenar los modelos.
      - **Función de Evaluación**: `evaluate_model` para calcular métricas de rendimiento.
 
-4. **Creación de `test_lab08_ruelas.py`**:
+2. **Creación de `test_lab08_ruelas.py`**:
    - Se creó un archivo de pruebas llamado `test_lab08_ruelas.py`, que utiliza `pytest` para verificar la funcionalidad del código. Este archivo incluye:
      - **Fixtures**: Para crear un DataFrame de muestra con un desbalance de clases.
      - **Tests**: Para verificar que las funciones de preprocesamiento, división de datos, entrenamiento de modelos y evaluación funcionen correctamente.
+
+## 📁 Estructura del Proyecto
+
+```
+├── main_module.py        # Contiene funciones principales de preprocesamiento y modelado
+├── test_lab08_ruelas.py  # Archivo de tests con Pytest
+├── README.md             # Documentación del repositorio
+└── requirements.txt      # (opcional) Librerías necesarias
+```
 
 ## Uso del Laboratorio
 
 ### Requisitos
 
+* Python 3.8 o superior
+
 Asegúrate de tener instaladas las siguientes librerías:
 
 ```bash
 pip install pandas numpy scikit-learn imbalanced-learn ucimlrepo pytest
+```
+
+También puedes crear un archivo `requirements.txt` con:
+
+```txt
+pandas
+numpy
+scikit-learn
+imbalanced-learn
+ucimlrepo
+pytest
+```
+
+## 📊 Resultados Esperados
+
+* Se muestran métricas detalladas por clase (precision, recall, f1).
+* Comparación clara entre Árbol y Random Forest.
+* Todos los tests de `pytest` deben pasar exitosamente.
+
+## 👨‍💻 Autor
+
+* **César Diego Ruelas Flores**  
+  Estudiante de Big Data y Ciencia de Datos - TECSUP  
+  [cesar.ruelas@tecsup.edu.pe](mailto:cesar.ruelas@tecsup.edu.pe)
+
+---
+
+> “La calidad del código no está en lo que hace, sino en cómo lo hace.”
+
+
+### Instrucciones para el Uso del README
+
+1. **Copia el contenido**: Copia el contenido del `README.md` en un archivo nuevo llamado `README.md` en tu repositorio de GitHub.
+2. **Ajusta según sea necesario**: Si hay detalles específicos que deseas agregar o modificar, siéntete libre de hacerlo.
+3. **Sube el archivo a GitHub**: Asegúrate de que el archivo `README.md` esté en la raíz de tu repositorio para que sea visible en la página principal.
